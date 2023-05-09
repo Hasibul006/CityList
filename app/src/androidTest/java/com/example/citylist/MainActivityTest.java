@@ -76,4 +76,15 @@ public class MainActivityTest {
         Espresso.pressBack(); //Back button
     }
 
+    @Test
+    public void UItest()
+    {
+        onView(withId(R.id.button_add)).perform(click());//Click add button to add a city to the list
+        onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Dhaka"));//Enter a City Name
+        onView(withId(R.id.button_confirm)).perform(click()); //Confirm the city name and add to the list
+
+
+
+    }
+
 }
